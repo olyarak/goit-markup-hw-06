@@ -429,6 +429,15 @@
             </li>
           </ul>
         </div>
+        <div class="form-container">
+          <strong class="join">Підпишіться на розсилку</strong>
+          <form action="" class="footer-form">
+            <label class="footer-field">
+              <input type="email" name="email" class="footer-input" placeholder="E-mail" />
+            </label>
+            <button type="submit" class="footer-btn">Підписатися</button>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- Modal -->
@@ -468,10 +477,14 @@
             <textarea name="comment" placeholder="Введіть текст" class="form-comment"></textarea>
           </label>
 
-          <input type="checkbox" name="accept" value="accept" id="accept" checked />
-          <label for="accept" class="accept-text"
-            >Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label
-          >
+          <label class="accept">
+            <input class="checkbox" type="checkbox" name="topic" value="accept" />
+            <span class="accept-icon"></span>
+            <span class="accept-text"
+              >Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span
+            >
+          </label>
+
           <button type="submit" class="form-btn">Відправити</button>
         </form>
       </div>
