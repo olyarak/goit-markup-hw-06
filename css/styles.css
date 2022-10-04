@@ -521,6 +521,12 @@ h6 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-input:focus-within {
+  border-color: var(--accent-color);
 }
 
 .footer-btn {
@@ -794,11 +800,18 @@ h6 {
   resize: none;
   width: 448px;
   height: 120px;
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-size: 12px;
   line-height: 1.15;
   letter-spacing: 0.01em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-comment:focus-within {
+  border-color: var(--accent-color);
 }
 
 .form-comment::placeholder {
@@ -826,20 +839,27 @@ h6 {
 }
 
 .accept-icon {
-  display: inline-block;
-  width: 16px;
+  display: flex;
+  justify-content: center;
+  margin-right: 7px;
+  width: 15px;
   height: 15px;
-  margin-right: 8px;
-
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .accept-icon {
+.check-icon {
+  fill: var(--primary-white-color);
+}
+
+.accept-link {
+  color: var(--accent-color);
+}
+
+.checkbox:checked ~ .accept-icon {
   background-color: var(--accent-color);
-  background-image: url(../images/full-check.svg);
-  background-size: contain;
-  background-origin: border-box;
   border-color: var(--accent-color);
 }
 
